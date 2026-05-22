@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HFBKPGUqihsoACEuHGFZ">
+    <mxGraphModel dx="2467" dy="1449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" value="" vertex="1">
+          <mxGeometry height="700" width="435" x="415" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=18;fontStyle=1" value="Website" vertex="1">
+          <mxGeometry height="30" width="140" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=18;fontStyle=1" value="Electronic module (main)" vertex="1">
+          <mxGeometry height="40" width="220" x="510" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-7" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Start" vertex="1">
+          <mxGeometry height="60" width="120" x="560" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Start" vertex="1">
+          <mxGeometry height="60" width="120" x="170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-12" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w3bM77MhG0iBWQsjnSDS-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-8" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=-10;fillColor=#fad7ac;strokeColor=#b46504;" value="Receive the data of the accelerometer" vertex="1">
+          <mxGeometry height="60" width="270" x="485" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-10" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w3bM77MhG0iBWQsjnSDS-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=-10;fillColor=#fad7ac;strokeColor=#b46504;" value="Set up input module essentials" vertex="1">
+          <mxGeometry height="60" width="270" x="485" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-14" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w3bM77MhG0iBWQsjnSDS-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-11" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=-10;fillColor=#fad7ac;strokeColor=#b46504;" value="Receive the data of the GPS tracker" vertex="1">
+          <mxGeometry height="60" width="270" x="485" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-17" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="w3bM77MhG0iBWQsjnSDS-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-13" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=24.999999999999773;fillColor=#b1ddf0;strokeColor=#10739e;" value="Send the data to the server" vertex="1">
+          <mxGeometry height="60" width="270" x="485" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-18" edge="1" parent="1" source="w3bM77MhG0iBWQsjnSDS-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="w3bM77MhG0iBWQsjnSDS-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="670" />
+              <mxPoint x="840" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w3bM77MhG0iBWQsjnSDS-16" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=-10;fillColor=#fad7ac;strokeColor=#b46504;" value="Delay for 10 seconds" vertex="1">
+          <mxGeometry height="60" width="270" x="485" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
