@@ -1,0 +1,22 @@
+(EN)
+THE MINAHEART MODULE
+
+DESC:
+    The Minaheart module is the module which uses to control the Minami rocket.
+    
+    Minaheart 1.0.0 (DEVELOPING)
+        -Communication between the website and the module.
+        -GPS Tracker for tracking the position
+        -Triple-axis accelerometer
+
+
+(TH)
+โมดูล MINAHEART
+
+คำอธิบาย:
+    โมดูล Minaheart คือโมดูลที่ใช้สำหรับควบคุมจรวด Minami
+    
+    Minaheart 1.0.0 (อยู่ระหว่างการพัฒนา)
+        การสื่อสารระหว่างเว็บไซต์และโมดูล
+        ระบบติดตาม GPS สำหรับติดตามตำแหน่ง
+        เครื่องวัดความเร่งสามแกน
