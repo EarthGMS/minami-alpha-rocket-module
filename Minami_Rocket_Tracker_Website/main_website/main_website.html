@@ -1,9 +1,50 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Minami Rocket Programme (MRP)</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+        <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(255, 182, 104);
+            text-shadow: 0 0 10px black;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        </style>
     </head>
     <body>
         <h1>THE MINAMI ROCKET PROGRAM TRACKER</h1>
         <h3>Status : N/A</h3>
+        <h3>Current height : N/A</h3>
+        <h3>Current position : N/A</h3>
+
+        <div id="map"></div>
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script>
+        // 1. Set your coordinates (latitude, longitude)
+        const lat = 13.758018;
+        const lng = 100.534066;
+
+        // 2. Create the map
+        const map = L.map('map').setView([lat, lng], 13);
+
+        // 3. Add map tiles (OpenStreetMap - free)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 4. Add a marker
+        L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup('🚀 Launch Site')
+            .openPopup();
+        </script>
     </body>
 </html>
