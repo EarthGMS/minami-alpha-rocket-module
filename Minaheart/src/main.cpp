@@ -1,3 +1,5 @@
+//THE MINAHEART MODULE PROGRAM
+
 #include <Arduino.h>
 
 //GPS MODULE
@@ -19,5 +21,11 @@ void setup(){
 }
 
 void loop(){
+    //Receive data from GPS tracker
 
+    //Receive data from the accelerometer
+
+    //Send data to the website
+
+    //Delay for 5 seconds
 }
