@@ -7,25 +7,56 @@
 #include <SoftwareSerial.h>
 
 //ACCELEROMETER
-#include <Adafruit_MPU6050.h>
-#include <Adafruit_Sensor.h>
+#include <MPU6050.h>
 #include <Wire.h>
 
 TinyGPSPlus GPS_MODULE; //GPS MODULE VARIABLE
-Adafruit_MPU6050 ACCELEROMETER; //ACCELEROMETER
+MPU6050 ACCELEROMETER; //ACCELEROMETER
+
+SoftwareSerial GPS_MODULE_SERIAL(4,3);
+
 
 //TO DO NEXT
 void setup(){
     Serial.begin(115200);
     Wire.begin();
+    GPS_MODULE_SERIAL.begin(115200);
+    ACCELEROMETER.initialize();
 }
 
 void loop(){
     //Receive data from GPS tracker
+    while (GPS_MODULE_SERIAL.available() > 0) {
+        char c = GPS_MODULE_SERIAL.read();
+        GPS_MODULE.encode(c);
+    }
+
+    if (GPS_MODULE.location.isUpdated()) {
+        Serial.print("Lat: "); Serial.println(GPS_MODULE.location.lat(), 6);
+        Serial.print("Lng: "); Serial.println(GPS_MODULE.location.lng(), 6);
+        Serial.print("Alt: "); Serial.println(GPS_MODULE.altitude.meters());
+        Serial.print("Speed: "); Serial.println(GPS_MODULE.speed.kmph());
+        Serial.print("Satellites: "); Serial.println(GPS_MODULE.satellites.value());
+    }
 
     //Receive data from the accelerometer
+    int16_t ax, ay, az;
+    int16_t gx, gy, gz;
+
+    ACCELEROMETER.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+
+    // Accelerometer (raw → g): divide by 16384 (±2g default)
+    Serial.print("Accel X: "); Serial.print(ax / 16384.0);
+    Serial.print(" Y: ");       Serial.print(ay / 16384.0);
+    Serial.print(" Z: ");       Serial.println(az / 16384.0);
+
+    // Gyroscope (raw → °/s): divide by 131 (±250°/s default)
+    Serial.print("Gyro X: ");  Serial.print(gx / 131.0);
+    Serial.print(" Y: ");       Serial.print(gy / 131.0);
+    Serial.print(" Z: ");       Serial.println(gz / 131.0);
 
     //Send data to the website
 
     //Delay for 5 seconds
+    delay(5000);
 }
