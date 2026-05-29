@@ -1,0 +1,16 @@
+
+MINAHEART ONE FLIGHT COMPUTER
+
+Desc : 
+	the Minaheart One is the flight computer which controls for:
+		-fuel activation
+		-parachute activation
+		-altitude record
+		-acceleration record
+		-location record
+
+Microcontroller - STM32F411CEU6 (BLACK PILL)
+Sensors:
+	Altitude record :
+	Acceleration record :
+	Location record :

@@ -1,0 +1,23 @@
+Minami Alpha One rocket
+
+Description : 
+				The Minami Alpha One rocket is the first rocket in the MINAMI rocket series. 
+			The rocket is the start point with the goal of:
+				-altitude record
+				-acceleration record
+				-location record
+				
+Goal : 1KM
+
+The rocket structure:
+	-Level 1 : Fuel chamber
+			-A part of rocket which inserts with the solid rocket fuel (TBD)
+			-Ingites from control of the flight computer via a relay.
+
+	-Level 2 : Rocket module
+			-Holds the flight computer
+			-Controls the activation of parachute, fuel
+			-Records the location and acceleration
+
+	-Level 3 : Payload
+			-Holds the stuff (Minami doll figure) (TBD)
