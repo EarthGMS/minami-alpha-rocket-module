@@ -21,3 +21,8 @@ The rocket structure:
 
 	-Level 3 : Payload
 			-Holds the stuff (Minami doll figure) (TBD)
+
+Estimated cost of the rocket:
+	Structure : TBD
+
+	Minaheart One : 750 Baht
