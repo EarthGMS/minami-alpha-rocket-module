@@ -4,14 +4,13 @@
 
 //GPS MODULE
 #include <TinyGPS++.h>
-#include <SoftwareSerial.h>
+//#include <SoftwareSerial.h>
 
 //ACCELEROMETER
 #include <MPU6050.h>
 #include <Wire.h>
 
 //Altitude measure
-#include <BMP280_DEV.h>
 
 //Variables
 #define ALTITUDE_PIN 10
@@ -21,19 +20,17 @@ bool parachuteActivate, fuel_igniter;
 //TinyGPSPlus GPS_MODULE; //GPS MODULE VARIABLE
 MPU6050 ACCELEROMETER; //ACCELEROMETER
 
-SoftwareSerial GPS_MODULE_SERIAL(4,3);
-
 //BMP280 - Altitude measure
-BMP280_DEV ALTITUDE_MEASURE(ALTITUDE_PIN);
+//BMP280_DEV ALTITUDE_MEASURE(ALTITUDE_PIN);
 
 
 //TO DO NEXT
 void setup(){
-    Serial.begin(115200);
+    SerialUSB.begin(115200);
     Wire.begin();
     //GPS_MODULE_SERIAL.begin(115200);
     ACCELEROMETER.initialize();
-    ALTITUDE_MEASURE.begin();
+    //ALTITUDE_MEASURE.begin();
 }
 
 void loop(){
@@ -63,16 +60,17 @@ void loop(){
     ACCELEROMETER.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 
     // Accelerometer (raw → g): divide by 16384 (±2g default)
-    Serial.print("Accel X: "); Serial.print(ax / 16384.0);
-    Serial.print(" Y: ");       Serial.print(ay / 16384.0);
-    Serial.print(" Z: ");       Serial.println(az / 16384.0);
+    SerialUSB.print("Accel X: "); SerialUSB.print(ax / 16384.0);
+    SerialUSB.print(" Y: ");       SerialUSB.print(ay / 16384.0);
+    SerialUSB.print(" Z: ");       SerialUSB.println(az / 16384.0);
 
     // Gyroscope (raw → °/s): divide by 131 (±250°/s default)
-    Serial.print("Gyro X: ");  Serial.print(gx / 131.0);
-    Serial.print(" Y: ");       Serial.print(gy / 131.0);
-    Serial.print(" Z: ");       Serial.println(gz / 131.0);
+    SerialUSB.print("Gyro X: ");  SerialUSB.print(gx / 131.0);
+    SerialUSB.print(" Y: ");       SerialUSB.print(gy / 131.0);
+    SerialUSB.print(" Z: ");       SerialUSB.println(gz / 131.0);
 
     //--------------------------------ALTITUDE MEASREMENT---------------------------------//
+    /*
     ALTITUDE_MEASURE.startForcedConversion();
     if (ALTITUDE_MEASURE.getMeasurements(temperature, pressure, altitude))
     {
@@ -83,10 +81,12 @@ void loop(){
         Serial.print(altitude);
         Serial.println(F("m"));  
     }
-
+    */
     //-----------------------------WEBSITE OUTPUT (TBD)------------------------------//
 
 
     //Delay for 5 seconds
-    delay(5000);
+
+    SerialUSB.println("****************************");
+    delay(1000);
 }

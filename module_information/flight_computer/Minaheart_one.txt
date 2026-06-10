@@ -13,4 +13,11 @@ Sensors:
 	Altitude record : BMP280
 	Acceleration record : MPU6050
 
+Communications:
+	LoRa : 
+
+Power module:
+	-AMS1117
+	-LiPo4 battery
+
 Estimated cost : 750 Baht per unit

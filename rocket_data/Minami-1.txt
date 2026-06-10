@@ -1,0 +1,17 @@
+The Minami Alpha Rocket
+
+Description
+
+	The Minami Alpha Rocket is the rocket which uses to become the "gateway" rocket to develop into better rockets, with the ultimate goal of reaching
+	100 KM
+
+Current goal : 1KM
+
+Parts:
+	Payload : 
+
+Estimated masses:
+	Minaheart I computer : 30 g max (To confirm later)
+	Parachute x 2 : 20 g max (To comfirm later)
+	Minami Hokutozai model : ???
+	Fuel : ???
