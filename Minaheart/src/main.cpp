@@ -12,8 +12,15 @@
 
 //Altitude measure
 
+//LoRa
+#include <SPI.h>
+#include <LoRa.h>
+
 //Variables
 #define ALTITUDE_PIN 10
+#define NSS   PA0
+#define RST   PB0
+#define DIO0  PB1
 float temperature, pressure, altitude;
 bool parachuteActivate, fuel_igniter;
 
@@ -31,6 +38,24 @@ void setup(){
     //GPS_MODULE_SERIAL.begin(115200);
     ACCELEROMETER.initialize();
     //ALTITUDE_MEASURE.begin();
+
+    //LoRa
+
+    Serial.begin(115200);
+
+    LoRa.setPins(NSS, RST, DIO0);
+
+    if (!LoRa.begin(433E6)) {  // match your module's frequency
+        Serial.println("LoRa init failed!");
+        while (true);
+    }
+
+    LoRa.setSpreadingFactor(9);
+    LoRa.setSignalBandwidth(125E3);
+    LoRa.setCodingRate4(7);
+    LoRa.setTxPower(17);
+
+    Serial.println("LoRa init OK");
 }
 
 void loop(){
@@ -82,8 +107,12 @@ void loop(){
         Serial.println(F("m"));  
     }
     */
-    //-----------------------------WEBSITE OUTPUT (TBD)------------------------------//
+    //-----------------------------LoRa communication------------------------------//
+    LoRa.beginPacket();
+    LoRa.print("ALT:1234,VEL:56.7");
+    LoRa.endPacket();
 
+    Serial.println("Sent packet");
 
     //Delay for 5 seconds
 
